@@ -11,12 +11,15 @@ function Search(props){
 
     function handleClick(){
         props.onSearchChange(searchText);
+        props.toDisableCategory(true);
+        setSearchText("");
         console.log("fn called");
     }
 
     return(
         <div className="search-container">
             <input type="text" placeholder="search" id="search-bar" 
+            value={searchText}
             onChange={handleChange} />
             <SavedSearchIcon className="search-icon" 
             onClick = {handleClick}/>

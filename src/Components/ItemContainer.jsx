@@ -27,7 +27,9 @@ function ItemContainer(props){
                 {getItems(searchedItem)}
             </div>
         :
-        <div className="item-container">No Product named "{props.searchItem}".</div> ;
+        <div className="item-container-extra">
+            No Product named "{props.searchItem}".
+        </div> ;
     }
     else{
 

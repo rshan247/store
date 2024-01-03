@@ -10,12 +10,11 @@ function Category(props){
         let value = event.target.value;
         // setCategory(value);
         props.onCategoryChange(value);
-        // console.log("category passed" + value);
     }
     
 
     return(
-        <div className="category-container">
+        <div className={`category-container  ${props.isCategoryDisabled && "disabled"}`}>
             <label>Category :</label>
             <Form.Select  className="category-dropdown" size="sm" onChange={handleCategoryChange}>
                 <option value="all">All</option>
