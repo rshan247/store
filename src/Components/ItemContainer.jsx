@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import items from "../items";
 import axios from "axios";
 
-
-
 function getItems(item){
 
     const setGray =item.availability;
@@ -20,18 +18,28 @@ function getItems(item){
 }
 
 function ItemContainer(props){
-    let filteredItems
-    if(props.selectedCategory == "all") filteredItems = items;
+    
+    if(props.searchItem){
+        const searchedItem = items.find((item) => item.name == props.searchItem)
+        console.log(searchedItem);
+        return searchedItem ? 
+            <div className="item-container">
+                {getItems(searchedItem)}
+            </div>
+        :
+        <div className="item-container">No Product named "{props.searchItem}".</div> ;
+    }
+    else{
 
-    else filteredItems = props.selectedCategory ? (items.filter((item) => item.category == props.selectedCategory)) : items;
+        const filteredItems = props.selectedCategory != "all" ? 
+        (items.filter((item) => item.category == props.selectedCategory)) : items;
 
-    // console.log(props.selectedCategory);
-    // console.log(filteredItems);
-    return(
-        <div className="item-container">
-            {filteredItems.map(item => getItems(item))}
-        </div>
-    );
+        return(
+            <div className="item-container">
+                {filteredItems.map(item => getItems(item))}
+            </div>
+        );
+    }
 }
 
 export default ItemContainer;

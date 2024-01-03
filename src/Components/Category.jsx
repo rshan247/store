@@ -22,6 +22,7 @@ function Category(props){
                 <option value="beauty">Beauty Products</option>
                 <option value="medicine">Medicines</option>
             </Form.Select>
+            
         </div>
     );
 }
