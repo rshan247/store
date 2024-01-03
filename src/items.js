@@ -5,7 +5,8 @@ const items = [
         name: "Parupu Podi",
         image: "https://earnmoneymobile.in/assets/images/bm1.png",
         description: "comming soon!",
-        price: 150
+        price: 150,
+        availability: true
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ const items = [
         name: "Charcoal soap",
         image: "https://earnmoneymobile.in/assets/images/bm1.png",
         description: "comming soon!",
-        price: 120
+        price: 120,
+        availability: true
     },
     {
         id: 3,
@@ -21,7 +23,8 @@ const items = [
         name: "Piles D",
         image: "https://earnmoneymobile.in/assets/images/bm1.png",
         description: "comming soon!",
-        price: 200
+        price: 200,
+        availability: true
     },
     {
         id: 4,
@@ -29,7 +32,8 @@ const items = [
         name: "Facial Pack",
         image: "https://earnmoneymobile.in/assets/images/bm1.png",
         description: "comming soon!",
-        price: 175
+        price: 175,
+        availability: false
     }
 ];
 

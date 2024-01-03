@@ -2,7 +2,10 @@
     margin: 0%;
     padding: 0%;
 }
-
+body{
+    background-color: transparent;
+    background-image: url("https://www.transparenttextures.com/patterns/food.png");
+}
 .navbar-text{
     width: 150px;
     text-align: center;
@@ -27,6 +30,7 @@
 }
 
 .product{
+    background-color: rgba(255, 255, 255, 0.5);
     width: 50%;
     box-sizing: border-box;
     padding: 1rem;
@@ -35,16 +39,83 @@
 .product-image{
     width: 100%;
     margin: auto;
+    background: #808080;
+    border-radius: 0.2rem;
+    padding: 1rem 0;
+}
+.gray-image{
+        -webkit-filter: grayscale(1); /* Webkit */
+        filter: gray; /* IE6-9 */
+        filter: grayscale(1); /* W3C */
 }
 
 .product-name{
     color: black;
+    font-size: 18px;
+    padding-top: .5rem;
 }
 
-.price{
-    color: rgb(118, 211, 24);
+/* .price{
+    color:white;
+    background-color: #9d5508;
+    padding: .2rem .3rem;
+    border-radius: .5rem;
+    font-size: 13px;
     font-weight: 500;
     font-style: italic;
+} */
+
+/* Price-tag */
+.price {
+	display: inline-block;
+    width: auto;
+	height: 20px;
+	
+	background-color: #9d5508;
+	-webkit-border-radius: 3px 4px 4px 3px;
+	-moz-border-radius: 3px 4px 4px 3px;
+	border-radius: 3px 4px 4px 3px;
+	
+	border-left: 1px solid #9d5508;
+
+	/* This makes room for the triangle */
+	margin-left: 10px;
+	
+	position: relative;
+	
+	color: white;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 20px;
+
+	padding: 0 .5rem 0 .5rem;
+}
+
+/* Makes the triangle */
+.price:before {
+	content: "";
+	position: absolute;
+	display: block;
+	left: -9.5px;
+	width: 0;
+	height: 0;
+	border-top: 11px solid transparent;
+	border-bottom: 11px solid transparent;
+
+	border-right: 11px solid #9d5508;
+}
+
+/* Makes the circle */
+.price:after {
+	content: "";
+	background-color: white;
+	border-radius: 50%;
+	width: 3px;
+	height: 3px;
+	display: block;
+	position: absolute;
+	left: -.5px;
+	top: 8.8px;
 }
 
 .product-description{

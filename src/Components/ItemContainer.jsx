@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import items from "../items";
+import axios from "axios";
 
 
 
 function getItems(item){
+
+    const setGray =item.availability;
+
     return(
             <div className="product" key={item.id}>
-                <img className="product-image" src={item.image} />
+                <img className ={`product-image ${!setGray ? "gray-image" : null }`}
+                src={item.image} />
                 <h2 className="product-name">{item.name}</h2>
                 <span className="price">{item.price} Rs</span>
                 <p className="product-description">{item.description}</p>
