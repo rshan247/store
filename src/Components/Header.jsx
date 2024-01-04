@@ -22,10 +22,10 @@ function Header(){
                     <div className="bg-warning p-4">
                         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <a className="nav-link active" aria-current="page" href="/">Home</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">About store</a>
+                                <a className="nav-link" href="/about">About store</a>
                             </li>
                         </ul>
                     </div>

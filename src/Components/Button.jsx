@@ -5,6 +5,7 @@ function Button(props){
     function handleClick(){
         props.toRestoreall("");
         props.toRestoreCategory(false)
+        props.category("all")
     }
 
     return(

@@ -3,7 +3,7 @@ import SavedSearchIcon from '@mui/icons-material/SavedSearch';
 
 
 function Search(props){
-    const [searchText, setSearchText] = useState()
+    const [searchText, setSearchText] = useState("");
 
     function handleChange(event){
         setSearchText(event.target.value);

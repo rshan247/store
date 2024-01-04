@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import items from "../items";
-import axios from "axios";
 
 function getItems(item){
 
@@ -20,11 +19,12 @@ function getItems(item){
 function ItemContainer(props){
     
     if(props.searchItem){
-        const searchedItem = items.find((item) => item.name == props.searchItem)
-        console.log(searchedItem);
-        return searchedItem ? 
+        // const searchedItem = items.find((item) => item.name == props.searchItem)
+        const searchedItem =items.filter((item) => item.name.toLowerCase().includes(props.searchItem.toLowerCase()));
+   
+        return searchedItem.length != 0 ? 
             <div className="item-container">
-                {getItems(searchedItem)}
+                {searchedItem.map(item => getItems(item))}
             </div>
         :
         <div className="item-container-extra">
