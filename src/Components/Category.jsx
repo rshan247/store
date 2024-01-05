@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Form from 'react-bootstrap/Form';
-
+import {useLocation} from "react-router-dom";
 
 function Category(props){
-
     const [category, setCategory] = useState("all");
 
      function handleCategoryChange(event){
@@ -12,12 +11,11 @@ function Category(props){
         props.onCategoryChange(value);
     }
     
-
     return(
         <div className={`category-container  ${props.isCategoryDisabled && "disabled"}`}>
             <label>Category :</label>
             <Form.Select  className="category-dropdown" size="sm" 
-            value={props.isCategoryAll == "all"? props.isCategoryAll : category} 
+            value={props.isCategoryAll} 
             onChange={handleCategoryChange}>
                 <option value="all">All</option>
                 <option value="beauty">Beauty Products</option>

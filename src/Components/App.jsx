@@ -5,6 +5,7 @@ import ItemContainer from "./ItemContainer";
 import Search from "./Search";
 import Db from "./Db";
 import Button from "./Button";
+import Footer from "./Footer";
 
 
 
@@ -13,21 +14,22 @@ function App(){
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [searchText, setSearchText] = useState("");
     const [categoryDisabled, setCategoryDisabled] = useState(false);
-    const [categoryAll, setCategoryALL] = useState("");
 
-    const handleCategoryChange = category => setSelectedCategory(category);
+    const handleCategoryChange = category => {
+        setSelectedCategory(category);
+    }
     const handleSearchText = text => setSearchText(text);    
     const handleCategoryDisable = value => {
         setCategoryDisabled(value);
         setSelectedCategory("all")
     }
-    const handleCategoryAll = value => setCategoryALL(value);
+
 
     return (
     <div>
         <Header />
         <Category 
-            isCategoryAll = {categoryAll}
+            isCategoryAll = {selectedCategory}
             onCategoryChange = {handleCategoryChange} 
             isCategoryDisabled = {categoryDisabled}
         />
@@ -42,13 +44,14 @@ function App(){
                 <Button 
                     toRestoreall = {handleSearchText}
                     toRestoreCategory = {handleCategoryDisable}
-                    category = {handleCategoryAll}
+                    category = {handleCategoryChange}
                 />
             </div>
         :
             <ItemContainer selectedCategory = {selectedCategory} />
         }
         {/* <Db /> */}
+        {selectedCategory == "all" && searchText == "" ? <Footer /> : null}
     </div>)
 }
 

@@ -11,7 +11,7 @@ function getItems(item){
                 src={item.image} alt={item.name} />
                 <h2 className="product-name">{item.name}</h2>
                 <span className="price">{item.price} Rs</span>
-                <p className="product-description">{item.description}</p>
+                {/* <p className="product-description">{item.description}</p> */}
             </div>
     );
 }

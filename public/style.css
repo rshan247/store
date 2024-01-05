@@ -61,10 +61,13 @@ body{
 }
 
 .product{
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 48%;
     box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 0.2rem;
     padding: 0.2rem;
+    padding-bottom: .5rem;
 }
 
 .product-image{
@@ -158,7 +161,7 @@ body{
 	font-family:Arial;
 	font-size:15px;
 	padding:.3rem .5rem;
-    margin: .5rem 0;
+    margin: .7rem 0;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #FFC107;
 }
@@ -180,7 +183,7 @@ body{
     padding: .2rem;
     margin-top: 1rem;
     font-size: 15px;
-    width: 100%;
+    width: 100%;    
 }
 
 .about-th{
@@ -190,4 +193,16 @@ body{
 .about-row th{
     width: 130px;
     padding: .5rem .4rem;
+}
+
+.footer{
+    margin-top: .5rem;
+    text-align: center;
+    height: 40px;
+    background-color: #ffc107c1;
+}
+.footer p{
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 600;
 }

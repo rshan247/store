@@ -22,8 +22,9 @@ function About(){
                     <td>2323232323</td>
                 </tr>
                 <tr className="about-row">
-                    <th>Address:</th>
-                    <td>12/10, ALS Complex,Managavalam Pillai Hospital Street, Palayamkotai Palai Vegitable Market Near</td>
+                    <th>Address</th>
+                    <td>
+                    12/10, ALS Complex,Managavalam Pillai Hospital Street, Palayamkotai Palai Vegitable Market Near</td>
                 </tr>
                 <tr className="about-row">
                     <th>Open Timing</th>
