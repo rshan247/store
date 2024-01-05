@@ -1,15 +1,21 @@
-import React from "react";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation} from "react-router-dom";
 
 function Header(){
+
+    const [activeLink, setActiveLink] = useState("home");
+    const location = useLocation();
+
+    useEffect(() => {
+        console.log('Current path:', location.pathname);
+      }, [location.pathname]);
+
     return(
         <nav className="navbar bg-warning">
             <div className="container">
-                <a className="navbar-brand" href="#">
+                <Link className="navbar-brand" href="#">
                 <img src="https://myv3ads.com/img/logo.png" alt="Bootstrap" width="50" height="50"/>
-                </a>
+                </Link>
                 <span className="navbar-text">
                     Sri Jeyanth Marketing
                 </span>
@@ -22,10 +28,17 @@ function Header(){
                     <div className="bg-warning p-4">
                         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Home</a>
+                                <Link className={`nav-link ${location.pathname == "/" && "active"}`} 
+                                aria-current="page" to="/"
+                                >
+                                    Home
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/about">About store</a>
+                                <Link className={`nav-link ${location.pathname == "/about" && "active"}`} to="/about"
+                                >
+                                    About store
+                                </Link>
                             </li>
                         </ul>
                     </div>

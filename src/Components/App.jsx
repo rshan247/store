@@ -5,7 +5,6 @@ import ItemContainer from "./ItemContainer";
 import Search from "./Search";
 import Db from "./Db";
 import Button from "./Button";
-import About from "./About";
 
 
 
@@ -49,7 +48,6 @@ function App(){
         :
             <ItemContainer selectedCategory = {selectedCategory} />
         }
-        <About />
         {/* <Db /> */}
     </div>)
 }
