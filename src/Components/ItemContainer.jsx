@@ -8,7 +8,7 @@ function getItems(item){
     return(
             <div className="product" key={item.id}>
                 <img className ={`product-image ${!setGray ? "gray-image" : null }`}
-                src={item.image} />
+                src={item.image} alt={item.name} />
                 <h2 className="product-name">{item.name}</h2>
                 <span className="price">{item.price} Rs</span>
                 <p className="product-description">{item.description}</p>

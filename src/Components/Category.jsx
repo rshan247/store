@@ -21,7 +21,9 @@ function Category(props){
             onChange={handleCategoryChange}>
                 <option value="all">All</option>
                 <option value="beauty">Beauty Products</option>
-                <option value="medicine">Medicines</option>
+                <option value="health care">Health care</option>
+                <option value="personal care">Personal care</option>
+                <option value="home care">Home care</option>
             </Form.Select>
             
         </div>
